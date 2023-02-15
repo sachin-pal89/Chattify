@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "549740996279",
+    "project_id": "chattify-318e7",
+    "storage_bucket": "chattify-318e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549740996279:android:bcfc3391ef27d983100f32",
+        "android_client_info": {
+          "package_name": "com.example.chattify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549740996279-b85e25ncnr58kv3es502eqt6mdva3dvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chattify",
+            "certificate_hash": "88785ca8d427b66b66af9a08c8ff2f39e2a9e190"
+          }
+        },
+        {
+          "client_id": "549740996279-f3ohjsijjp21uacqh7pf8tc2eogrkldv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdzg87hsvO4IeEYdlcN2MuCCEz-sVnXvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549740996279-f3ohjsijjp21uacqh7pf8tc2eogrkldv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
