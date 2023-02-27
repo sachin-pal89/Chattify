@@ -99,6 +99,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         height: 15,
                       ),
                       TextFormField(
+                        // to show password in safe manner
+                        obscureText: true,
                         decoration: textInputDecoration.copyWith(
                             labelText: "Password",
                             prefixIcon: Icon(
