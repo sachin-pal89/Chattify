@@ -4,6 +4,7 @@ import 'package:chattify/pages/profile_page.dart';
 import 'package:chattify/pages/search_page.dart';
 import 'package:chattify/services/auth_service.dart';
 import 'package:chattify/services/database_service.dart';
+import 'package:chattify/widgets/group_tile.dart';
 import 'package:chattify/widgets/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,18 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     gettingUserData();
+  }
+
+  // string manipulation
+
+  // to get the id of the group
+  String getGroupId(res) {
+    return res.substring(0, res.indexOf("_"));
+  }
+
+  // to get the name of the group
+  String getGroupName(res) {
+    return res.substring(res.indexOf("_") + 1);
   }
 
   // setting up user data
@@ -301,7 +314,20 @@ class _HomePageState extends State<HomePage> {
         if (snapshot.hasData) {
           if (snapshot.data['groups'] != null) {
             if (snapshot.data['groups'].length != 0) {
-              return const Text("Hello Sachin");
+              // to list down all the groups user joined in
+              return ListView.builder(
+                itemCount: snapshot.data['groups'].length,
+                itemBuilder: (context, index) {
+                  // to show most recent add group first
+                  int reverseIndex = snapshot.data['groups'].length - index - 1;
+                  return GroupTile(
+                      groupId:
+                          getGroupId(snapshot.data['groups'][reverseIndex]),
+                      groupName:
+                          getGroupName(snapshot.data['groups'][reverseIndex]),
+                      userName: snapshot.data['fullName']);
+                },
+              );
             } else {
               return noGroupWidget();
             }

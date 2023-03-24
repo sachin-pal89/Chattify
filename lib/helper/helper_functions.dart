@@ -24,13 +24,13 @@ class HelperFunctions {
   }
 
   // getting data from SF
-  
+
   // getting the log in status of the user
   static Future<bool?> getUserLoggedInStatus() async {
     SharedPreferences sf = await SharedPreferences.getInstance();
     return sf.getBool(userLoggedInKey);
   }
-  
+
   // getting the email of the user
   static Future<String?> getUserEmailFromSF() async {
     SharedPreferences sf = await SharedPreferences.getInstance();
